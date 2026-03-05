@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STUDIO217 - Where passion for customer care meets expertise and innovation</title>
-  <meta name="description" content="STUDIO217 is a consulting and innovation company. We help brands deliver exceptional customer experiences, build AI-powered tools, and generate the ideas that solve real business problems and scale customer bases." />
-  <meta property="og:title" content="STUDIO217 - Where passion for customer care meets expertise and innovation" />
-  <meta property="og:description" content="CX consulting, AI innovation, and growth strategy - where passion for customer care meets expertise and innovation." />
+  <title>Studio217 — Customer Experience & AI Innovation</title>
+  <meta name="description" content="Studio217 is a NYC-based agency that helps brands deliver exceptional customer experiences, build AI-powered tools, and scale their customer base." />
+  <meta property="og:title" content="Studio217 — Customer Experience & AI Innovation" />
+  <meta property="og:description" content="CX consulting, AI innovation, and growth strategy — the agency that consults and builds." />
   <meta property="og:image" content="https://STUDIO217.ai/og-image.jpg" />
   <meta property="og:url" content="https://STUDIO217.ai" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 28px;
       letter-spacing: 0.5px;
       color: var(--ink);
       text-decoration: none;
@@ -106,14 +106,7 @@
       text-align: center;
     }
 
-    .hero-label {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 2.8px;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-bottom: 52px;
-    }
+    /* .hero-label removed */
 
     h1 {
       font-family: 'Cormorant Garamond', serif;
@@ -291,6 +284,26 @@
       font-weight: 300;
       color: var(--ash);
       line-height: 1.9;
+    }
+
+    .services-intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(26px, 3.5vw, 38px);
+      color: var(--ink);
+      margin-bottom: 56px;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    .industry-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ash);
+      margin-top: 12px;
+      margin-bottom: 48px;
+      max-width: 480px;
+      line-height: 1.8;
     }
 
     .service-link {
@@ -621,8 +634,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero .hero-label { animation: hIn 0.9s ease both; animation-delay: 0.1s; }
-    .hero h1          { animation: hIn 0.9s ease both; animation-delay: 0.25s; }
+    .hero h1          { animation: hIn 0.9s ease both; animation-delay: 0.1s; }
     .hero .hero-sub   { animation: hIn 0.9s ease both; animation-delay: 0.42s; }
     .hero .hero-ctas  { animation: hIn 0.9s ease both; animation-delay: 0.58s; }
 
@@ -739,8 +751,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-label">Where passion for customer care meets expertise and innovation</p>
-    <h1>Customer Care.<br>AI Innovation.<br><em>Growth.</em></h1>
+    <h1>We build the tools<br>that keep <em>customers.</em></h1>
     <p class="hero-sub">
       STUDIO217 helps brands deliver exceptional customer experiences, build AI tools that make teams more effective, and generate the ideas that solve real business problems and scale customer bases.
     </p>
@@ -776,6 +787,7 @@
   <section id="services">
     <div class="services-wrap">
       <div class="section-label reveal">Services</div>
+      <p class="services-intro reveal">Three disciplines.<br>One integrated approach.</p>
       <div class="services-list">
 
         <div class="service-item reveal">
@@ -843,6 +855,7 @@
   <section>
     <div class="industries-wrap">
       <h2 class="reveal">Built for<br>every industry.</h2>
+      <p class="industry-sub reveal">From retail to hospitality — if your business runs on customer relationships, we can help.</p>
       <div class="industries-grid">
 
         <div class="industry-item reveal">
@@ -904,7 +917,7 @@
   <div class="line"></div>
   <footer>
     <a href="/" class="footer-logo">STUDIO217</a>
-    <span class="footer-tagline">Where passion for customer care meets expertise and innovation</span>
+    <span class="footer-tagline">Customer experience & AI innovation, together.</span>
     <ul class="footer-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
