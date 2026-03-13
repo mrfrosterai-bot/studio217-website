@@ -315,6 +315,36 @@ nav .container {
 }
 .cta-section .section-title { max-width: 700px; margin: 0 auto 16px; }
 
+/* ═══ CONTACT FORM ═══ */
+.contact-form {
+  max-width: 600px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.form-row { display: flex; gap: 16px; }
+.form-row input { flex: 1; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%; padding: 16px 20px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); color: var(--text);
+  font-family: 'Inter', sans-serif; font-size: 0.95rem;
+  outline: none; transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-dim);
+}
+.contact-form select { color: var(--text-dim); }
+.contact-form select option { background: var(--bg-card); color: var(--text); }
+.contact-form textarea { resize: vertical; min-height: 120px; }
+@media (max-width: 600px) { .form-row { flex-direction: column; } }
+
 /* ═══ FOOTER ═══ */
 footer {
   border-top: 1px solid var(--border);
@@ -357,7 +387,7 @@ footer a { color: var(--accent-light); text-decoration: none; }
       <a href="#services">Services</a>
       <a href="#how">How It Works</a>
       <a href="#cases">Use Cases</a>
-      <a href="mailto:hello@studio217.ai" class="nav-cta">Get Started</a>
+      <a href="#contact" class="nav-cta">Contact</a>
     </div>
   </div>
 </nav>
@@ -369,7 +399,7 @@ footer a { color: var(--accent-light); text-decoration: none; }
     <h1>We build AI agents<br>that <em>run your business</em></h1>
     <p>Custom AI automation for travel, hospitality, e-commerce, and operations. We turn your repetitive tasks into intelligent systems that work 24/7.</p>
     <div class="hero-buttons">
-      <a href="mailto:hello@studio217.ai" class="btn-primary">Book a Free Consultation →</a>
+      <a href="#contact" class="btn-primary">Get in Touch →</a>
       <a href="#services" class="btn-secondary">See What We Build</a>
     </div>
   </div>
@@ -511,13 +541,34 @@ footer a { color: var(--accent-light); text-decoration: none; }
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
+<!-- CONTACT -->
+<section id="contact" class="cta-section" style="padding: 120px 0;">
   <div class="container">
-    <div class="section-label reveal">Ready?</div>
-    <h2 class="section-title reveal">Stop doing what a machine<br>should be doing for you.</h2>
-    <p class="section-subtitle reveal" style="margin: 0 auto 40px;">Book a free 30-minute discovery call. We'll map your workflows and show you exactly what we can automate.</p>
-    <a href="mailto:hello@studio217.ai?subject=Discovery Call Request" class="btn-primary reveal">Book Your Free Call →</a>
+    <div class="section-label reveal" style="text-align:center;">Contact</div>
+    <h2 class="section-title reveal" style="text-align:center;">Let's talk about your automation.</h2>
+    <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto 48px;">Tell us about your business and what you'd like to automate. We'll get back to you within 24 hours.</p>
+    <form class="contact-form reveal" action="https://formsubmit.co/hello@studio217.ai" method="POST">
+      <input type="hidden" name="_subject" value="Studio 217 — New Inquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://studio217.ai">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <input type="text" name="company" placeholder="Company Name">
+      <select name="interest">
+        <option value="" disabled selected>What are you interested in?</option>
+        <option value="Customer Service AI">Customer Service AI</option>
+        <option value="Travel & Booking Automation">Travel & Booking Automation</option>
+        <option value="Email Automation">Email Automation</option>
+        <option value="Data Processing">Data Processing</option>
+        <option value="Workflow Orchestration">Workflow Orchestration</option>
+        <option value="Telegram / WhatsApp Bots">Telegram / WhatsApp Bots</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Tell us about your project or what you'd like to automate..."></textarea>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+    </form>
   </div>
 </section>
 
